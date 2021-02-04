@@ -1,0 +1,26 @@
+<%- include("template/cabecera") %>
+<body>
+    <h1 class="text-primary">
+        Mascotas
+    </h1>
+    <h2> Nombre: <%= nombre %> </h2>
+    <div class="container">
+        <% if (arrayMascotas.lenght >0) { %>
+            <% array.forEach(mascota => { %>
+                    <tr>
+                        <th scope ="row"> 1</th>
+                        <td>
+                            <%= mascota.nombre=>
+                        </td>
+                        <td>
+                            <%= mascota.tamano=>
+                        </td>
+
+                        </th>
+                    </tr>
+            <% }) %>
+        <% } %>
+    </div>
+
+</body>
+</html> 
