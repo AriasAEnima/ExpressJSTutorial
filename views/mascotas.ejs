@@ -3,23 +3,40 @@
     <h1 class="text-primary">
         Mascotas
     </h1>
-    <h2> Nombre: <%= nombre %> </h2>
     <div class="container">
-        <% if (arrayMascotas.lenght >0) { %>
-            <% array.forEach(mascota => { %>
-                    <tr>
-                        <th scope ="row"> 1</th>
-                        <td>
-                            <%= mascota.nombre=>
-                        </td>
-                        <td>
-                            <%= mascota.tamano=>
-                        </td>
+        
+                <table class="table">
+                    <thead>
+                        <th scope="col"> # </th>
+                        <th scope="col"> Nombre </th>
+                        <th scope="col"> Tamaño </th>
+                    </thead>
+                    
+                    <tbody>
+                        <% if (arrayMascotasDB) { %>
+                            <% arrayMascotasDB.forEach(mascota => { %>
+                                <tr>
+                                    <th scope ="row"> <%= mascota.id%></th>
+                                    <td>
+                                        <%= mascota.nombre%>
+                                    </td>
+                                    <td>
+                                        <%= mascota.tamano%>
+                                    </td>
 
-                        </th>
-                    </tr>
-            <% }) %>
-        <% } %>
+                                </tr>
+                             
+                            <% }) %>
+                         
+                        <% } %>
+                               
+                          
+                    </tbody>
+                            
+                    
+                </table>
+                 
+            
     </div>
 
 </body>
